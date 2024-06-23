@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeRunner</title>
+    <link rel="stylesheet" href="codemirror-5.65.16/lib/codemirror.css">
+    <script src="codemirror-5.65.16/lib/codemirror.js"></script>
+    <script src="codemirror-5.65.16/mode/clike/clike.js"></script>
+   <script src="codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    <link rel="stylesheet" href="codemirror-5.65.16/theme/icecoder.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>     
+    h1 {
+        color:blue;
+        
+    }
+
+    .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        
+        .io-container {
+            flex: 1;
+            width: 100px;
+            
+        }
+
+        .code-editor-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #343a40;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .toolbar select,
+        .toolbar button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .toolbar select {
+            width: 200px;
+        }
+
+        .toolbar button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .io-container {
+            
+            background-color: #351e55;
+            color: white;
+            padding:20px;
+            border-radius: 5px;
+
+        }
+
+        .io-container label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            align-content: center;
+            align-items: center;
+        }
+
+        .io-container textarea {
+            width: 80%;
+            height: 150px;
+            padding: 26px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            resize: none;
+         
+        }
+
+        textarea #editor {
+            height: 500px;
+            width:100%
+        }
+
+   
+    </style>
+</head>
+<body>
+    <div class="top" id="titlehead" align="center">
+        <h1 text:"bold">L E T s   C O D E</h1>
+    </div>
+
+ <div class="main">
+    <div class="code-editor-container">
+        <div class="toolbar"> 
+            <select  id="language">
+                <option selected>Choose...</option>
+                <option value="1">C++</option>
+                <option value="2">Java</option>
+                <option value="3">Python</option>
+            </select>
+            <div>
+                   <button type="button" >Coding Sprint</button>
+                   <button type="button" id="run"><i class="bi bi-play-fill"></i></button>
+            </div>
+        </div>
+        <textarea type="text" id="editor" class="runner"></textarea>
+    </div>
+    <div class="io-container">
+        <div>
+            <label for="input">Input</label>
+            <textarea id="input" aria-label="Input"></textarea>
+        </div>
+        <div>
+            <label for="output">Output</label>
+            <textarea id="output" aria-label="Output"></textarea>
+        </div>
+    </div>
+  </div>
+
+</body>
+<script>
+
+
+    var editor= CodeMirror.fromTextArea(document.getElementById("editor"),{
+        mode:"text/x-c++src",
+        theme:"icecoder",
+        lineNumbers:true,
+        autoCloseBrackets:true
+        
+    })  
+    var width=window.innerWidth
+    editor.setSize(0.7*width,"500")
+
+
+ 
+</script>
+</html>
