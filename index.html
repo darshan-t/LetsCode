@@ -8,8 +8,11 @@
     <script src="codemirror-5.65.16/lib/codemirror.js"></script>
     <script src="codemirror-5.65.16/mode/clike/clike.js"></script>
    <script src="codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+   <script src="codemirror-5.65.16/mode/python/python.js"></script>
+
     <link rel="stylesheet" href="codemirror-5.65.16/theme/icecoder.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="myscript.js"></script>
     <style>     
     h1 {
         color:blue;
@@ -112,7 +115,7 @@
                 <option value="3">Python</option>
             </select>
             <div>
-                   <button type="button" >Coding Sprint</button>
+                   <button type="button" >Run Code</button>
                    <button type="button" id="run"><i class="bi bi-play-fill"></i></button>
             </div>
         </div>
@@ -144,7 +147,5 @@
     var width=window.innerWidth
     editor.setSize(0.7*width,"500")
 
-
- 
 </script>
 </html>
