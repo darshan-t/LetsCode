@@ -82,4 +82,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special thanks to the Node.js and Bootstrap communities for their valuable tools and documentation.
 
 
-<img width="913" alt="LetsCodePreview" src="https://github.com/darshan-t/LetsCode/assets/171030373/82f932f7-0102-46e2-a4b4-3d7d5389ec63">
+
